@@ -1,0 +1,8 @@
+<!DOCTYPE RCC><RCC version = "1.0">
+<qresource>
+    <file>Source/img_login.png</file>
+    <file>Source/logo.svg</file>
+    <file>Source/img_cerrar.svg</file>
+    <file>Source/img_minimizar.svg</file>
+</qresource>
+</RCC>
