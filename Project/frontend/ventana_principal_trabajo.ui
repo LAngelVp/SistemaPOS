@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1075</width>
+    <width>1064</width>
     <height>600</height>
    </rect>
   </property>
@@ -79,6 +79,13 @@ border-radius:10px;
 }
 #btn_clientes:hover{
 background-color: rgb(212, 234, 247);
+}
+#panel_opciones_desplegable{
+background-color: rgb(245, 244, 241);
+border-right: 1px solid  rgb(204, 203, 200);
+}
+#panel_cuerpo{
+	background-color: rgb(255, 254, 251);
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -99,7 +106,7 @@ background-color: rgb(212, 234, 247);
      <number>0</number>
     </property>
     <item row="1" column="0">
-     <widget class="QWidget" name="widget" native="true">
+     <widget class="QWidget" name="panel_ventana" native="true">
       <property name="styleSheet">
        <string notr="true"/>
       </property>
@@ -120,21 +127,21 @@ background-color: rgb(212, 234, 247);
         <number>0</number>
        </property>
        <item>
-        <widget class="QWidget" name="widget_2" native="true">
+        <widget class="QWidget" name="panel_opciones_desplegable" native="true">
          <property name="minimumSize">
           <size>
-           <width>200</width>
+           <width>180</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>250</width>
+           <width>180</width>
            <height>16777215</height>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);</string>
+          <string notr="true"/>
          </property>
         </widget>
        </item>
@@ -812,7 +819,7 @@ background-color: rgb(212, 234, 247);
            </widget>
           </item>
           <item>
-           <widget class="QWidget" name="widget_5" native="true"/>
+           <widget class="QWidget" name="panel_cuerpo" native="true"/>
           </item>
          </layout>
         </widget>

@@ -1,8 +1,15 @@
 <!DOCTYPE RCC><RCC version = "1.0">
 <qresource>
-    <file>Source/img_login.png</file>
-    <file>Source/logo.svg</file>
+    <file>Source/acceso.svg</file>
+    <file>Source/clientes.svg</file>
+    <file>Source/compras.svg</file>
     <file>Source/img_cerrar.svg</file>
     <file>Source/img_minimizar.svg</file>
+    <file>Source/inventario.svg</file>
+    <file>Source/logo.svg</file>
+    <file>Source/maximizar.svg</file>
+    <file>Source/menu.svg</file>
+    <file>Source/proveedor.svg</file>
+    <file>Source/ventas.svg</file>
 </qresource>
 </RCC>

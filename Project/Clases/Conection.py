@@ -23,4 +23,3 @@ class ConexionBD:
         if self.connect_me is not None:
             self.connect_me.close()
             print("Conexión cerrada")
-ConexionBD().conexion
