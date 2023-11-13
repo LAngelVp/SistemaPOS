@@ -1,5 +1,5 @@
 import sys
-import img
+import Clases.img as img
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import QIcon, QPixmap, QMouseEvent

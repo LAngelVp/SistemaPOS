@@ -11,5 +11,21 @@
     <file>Source/menu.svg</file>
     <file>Source/proveedor.svg</file>
     <file>Source/ventas.svg</file>
+
+    <file>Source/buscar_persona.svg</file>
+    <file>Source/Crear.svg</file>
+    <file>Source/cuenta.svg</file>
+    <file>Source/editar.svg</file>
+    <file>Source/eliminar.svg</file>
+    <file>Source/guardar.svg</file>
+    <file>Source/informacion.svg</file>
+
+    <file>Source/configuaracion_usuario.svg</file>
+    <file>Source/configuaracion.svg</file>
+    <file>Source/graficas.svg</file>
+    <file>Source/imprimir.svg</file>
+    <file>Source/reportes.svg</file>
+    <file>Source/venta.svg</file>
+    <file>Source/buscar.svg</file>
 </qresource>
 </RCC>
