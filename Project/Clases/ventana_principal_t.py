@@ -3,7 +3,7 @@ import iconos
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import QIcon, QPixmap, QMouseEvent
-from .ventana_principal_trabajo import Ui_ventana_de_trabajo
+from ventana_principal_trabajo import Ui_ventana_de_trabajo
 
 
 class ventana_principal_trabajo(QMainWindow):
