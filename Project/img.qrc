@@ -1,5 +1,6 @@
 <!DOCTYPE RCC><RCC version = "1.0">
 <qresource>
+    <file>Source/Dev_Rous_SF.png</file>
     <file>Source/acceso.svg</file>
     <file>Source/clientes.svg</file>
     <file>Source/compras.svg</file>
@@ -20,8 +21,8 @@
     <file>Source/guardar.svg</file>
     <file>Source/informacion.svg</file>
 
-    <file>Source/configuaracion_usuario.svg</file>
-    <file>Source/configuaracion.svg</file>
+    <file>Source/configuracion_usuario.svg</file>
+    <file>Source/configuracion.svg</file>
     <file>Source/graficas.svg</file>
     <file>Source/imprimir.svg</file>
     <file>Source/reportes.svg</file>

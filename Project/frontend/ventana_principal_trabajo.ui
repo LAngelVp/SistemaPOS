@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1064</width>
-    <height>600</height>
+    <height>616</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,10 +20,6 @@
 	margin-left: 10px;
 }
 #img_logo{
-	/*padding-top:100px;
-	padding-bottom:100px;
-	padding-left:150px;
-	padding-right:150px;*/
 	min_width:450px;
 	max-width:700px;
 	
@@ -62,6 +58,7 @@ background-color: rgb(191, 191, 191);
 }
 [objectName^=&quot;bts_bts&quot;] {
 background-color: rgb(230, 230, 230);
+padding:2px;
 border-radius:5px;
 min-width:70px;
 font-size:12px;
@@ -282,7 +279,7 @@ padding:15px;
         <widget class="QWidget" name="panel_opciones_desplegable" native="true">
          <property name="minimumSize">
           <size>
-           <width>0</width>
+           <width>90</width>
            <height>0</height>
           </size>
          </property>
