@@ -1,4 +1,4 @@
-from Conection import *
+from Base_de_Datos.Conection import *
 class Persona:
     def __init__(self,nombre, fecha_nacimiento , numero_identificacion, direccion, correo_electronico, numero_telefono, localidad, estado):
         self.nombre = nombre

@@ -1,10 +1,9 @@
 import sys
-import iconos
+from .SRC.iconos import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import QIcon, QPixmap, QMouseEvent
-from ventana_principal_trabajo import Ui_ventana_de_trabajo
-
+from .UI.ventana_principal_trabajo import *
 
 class ventana_principal_trabajo(QMainWindow):
     def __init__(self):
@@ -71,6 +70,8 @@ class ventana_principal_trabajo(QMainWindow):
 
     def cerrar(self):
         self.close()
+        ventana_anterior = Inicio()
+        ventana_anterior.show()
 
     def minimizar(self):
         self.showMinimized()

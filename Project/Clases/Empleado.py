@@ -1,8 +1,14 @@
-from Conection import ConexionBD
-from Persona import *
+from Base_de_Datos.Conection import ConexionBD
+from Persona import Persona
+from Puesto import Puesto
+
+
 class Empleado(Persona):
-    def __init__(self, curriculum_vitae, numero_seguro_social, nombre_usuario, contraseña, foto):
-        super().__init__(nombre, fecha_nacimiento , numero_identificacion, direccion, correo_electronico, numero_telefono, localidad, estado)
+    def __init__(
+        self,curriculum_vitae,numero_seguro_social,nombre_usuario,contraseña,foto,nombre,fecha_nacimiento,numero_identificacion,direccion,correo_electronico,numero_telefono,localidad,estado,puesto,sueldo):
+        super().__init__(nombre,fecha_nacimiento,numero_identificacion,direccion,correo_electronico,numero_telefono,localidad,estado
+        )
+        super(Puesto,self).__init__(puesto, sueldo)
 
         self.curriculum_vitae = curriculum_vitae
         self.numero_seguro_social = numero_seguro_social
@@ -10,11 +16,14 @@ class Empleado(Persona):
         self.nombre_usuario = nombre_usuario
         self.contraseña = contraseña
         self.foto = foto
-    
-    def agregar_empleado(self, nombre, fecha_nacimiento , numero_identificacion, direccion, correo_electronico, numero_telefono, localidad, estado, curriculum_vitae, numero_seguro_social, nombre_usuario, contraseña, foto):
-        
 
-        pass
+    def guardar_empleado(self,curriculum_vitae,numero_seguro_social,nombre_usuario,contraseña,foto,nombre,fecha_nacimiento,numero_identificacion,direccion,correo_electronico,numero_telefono,localidad,estado,puesto,sueldo):
+        conexion = ConexionBD().conexion
+        consulta = "INSERT INTO"
+
+    
+
+
 #         try:
 #             con = ConexionBD().conexion
 #             query = "INSERT INTO empleado (nombre, fecha_nacimiento, genero, direccion, telefono, tipo_de_sangre, puesto, salario) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
@@ -28,4 +37,3 @@ class Empleado(Persona):
 
 # empleado = Empleado("Luis Angel", "1996-10-31", "masculino", "paso del macho", "212-123-12-21", "0-", "ingeniero", 1200)
 # empleado.add_user()
-

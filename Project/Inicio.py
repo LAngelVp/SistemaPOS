@@ -1,11 +1,13 @@
 import sys
-import iconos 
+from Clases.SRC.iconos import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import QIcon, QPixmap, QMouseEvent
 from frontend.Login import *
 from Clases.ventana_principal_t import *
-from Clases.Conection import ConexionBD
+from Clases.Base_de_Datos.Conection import ConexionBD
+
+
 class Inicio(QMainWindow):
     def __init__(self):
         super(Inicio, self).__init__()
@@ -14,14 +16,15 @@ class Inicio(QMainWindow):
         self.setWindowFlags(self.windowFlags() | Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground, True)
         self.ui.panel_principal.setStyleSheet("border-radius: 12px;")
-        self.ui.panel_izquierda.setStyleSheet("background:#71c4ef; border-top-right-radius:0px; border-bottom-right-radius:0px;")
+        self.ui.panel_izquierda.setStyleSheet(
+            "background:#edecec; border-top-right-radius:0px; border-bottom-right-radius:0px;"
+        )
         self.ui.lbl_recuperar_credenciales.setStyleSheet("text-decoration: underline")
         self.ui.btn_cerrar.setIcon(QIcon(":/Source/img_cerrar.svg"))
-        self.ui.img_fondo.setPixmap(QPixmap(":/Source/logo.svg"))
+        self.ui.img_fondo.setPixmap(QPixmap(":/Source/Dev_Rous_SF.png"))
         self.ui.img_login.setPixmap(QPixmap(":/Source/acceso.svg"))
         self.ui.btn_cerrar.clicked.connect(self.cerrar)
         self.ui.btn_ingresar.clicked.connect(self.ingresar)
-
 
     def cerrar(self):
         self.close()
@@ -44,7 +47,8 @@ class Inicio(QMainWindow):
             self.ui.show()
         else:
             self.ui.lbl_datos_incorrectos.setText("Usuario o contraseña incorrectos")
-            
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     ui = Inicio()

@@ -1,9 +1,9 @@
 import sys
-import Clases.img as img
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import QIcon, QPixmap, QMouseEvent
-from RegistroPersonal import *
+from SRC.iconos import *
+from UI.RegistroPersonal import *
 class Inicio(QMainWindow):
     def __init__(self):
         super(Inicio, self).__init__()

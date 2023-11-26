@@ -1,4 +1,4 @@
-from ConectionBD.Conection import *
+from Base_de_Datos.Conection import *
 class Usuario:
     def __init__(self):
         pass
