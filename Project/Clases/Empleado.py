@@ -19,7 +19,7 @@ class Empleado(Persona):
 
     def guardar_empleado(self,curriculum_vitae,numero_seguro_social,nombre_usuario,contraseña,foto,nombre,fecha_nacimiento,numero_identificacion,direccion,correo_electronico,numero_telefono,localidad,estado,puesto,sueldo):
         conexion = ConexionBD().conexion
-        consulta = "INSERT INTO"
+        consulta = "INSERT INTO empleados ()"
 
     
 

@@ -10,6 +10,3 @@ class Persona:
         self.localidad = localidad
         self.estado = estado
 
-    def agregar_persona(self):
-        pass
-
