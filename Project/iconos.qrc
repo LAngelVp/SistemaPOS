@@ -28,5 +28,7 @@
     <file>Source/reportes.svg</file>
     <file>Source/venta.svg</file>
     <file>Source/buscar.svg</file>
+    <file>Source/alarma.png</file>
+    <file>Source/verificar_usuario.png</file>
 </qresource>
 </RCC>
