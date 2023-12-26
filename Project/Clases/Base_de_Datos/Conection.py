@@ -4,10 +4,10 @@ import pymysql
 
 class ConexionBD:
     def __init__(self):
-        self.user = "root"
-        self.password = "MySQL"
+        self.user = "LUIS"
+        self.password = "luisperez"
         self.host = "localhost"
-        self.database = "POS_Venta"
+        self.database = "BD_POS"
         self.connect_me = None  # Conexión inicialmente nula
 
     @property
@@ -40,9 +40,11 @@ class ConexionBD:
                 with conexion.cursor() as cursor:
                     consulta = f"CREATE DATABASE IF NOT EXISTS {self.database}"
                     cursor.execute(consulta)
+                    self.crear_tablas
                     print("Creamos la tabla")
         except pymysql.Error as error:
             print("No se creo")
+            return
 
     @property
     def crear_tablas(self):
@@ -71,7 +73,7 @@ class ConexionBD:
         )"""
         # COMMENT: TABLA USUARIOS
         tabla_usuario = """CREATE TABLE IF NOT EXISTS usuarios (
-        id INTEGER PRIMARY KEY,
+        id INTEGER AUTO_INCREMENT PRIMARY KEY,
         nombre_usuario VARCHAR(50),
         contraseña VARCHAR(25)
         )"""
@@ -82,7 +84,7 @@ class ConexionBD:
         parentezco VARCHAR(50),
         numero_telefono VARCHAR(10)
         )"""
-        
+
         # ---------------------------------------------------------------
         # COMMENT: TABLAS CON LLAVES FORANEAS ---------------------------
         # COMMENT: TABLA DE COMPRAS
@@ -110,7 +112,7 @@ class ConexionBD:
         id_proveedor INTEGER,
         FOREIGN KEY (id_proveedor) REFERENCES proveedores(id)
         )"""
-        #COMMENT: TABLA DE DETALLE DE COMPRA
+        # COMMENT: TABLA DE DETALLE DE COMPRA
         tabla_detalle_compra = """CREATE TABLE IF NOT EXISTS detalle_compra(
         id INTEGER PRIMARY KEY,
         id_compra INTEGER,
@@ -142,21 +144,20 @@ class ConexionBD:
         FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
         FOREIGN KEY (contacto_emergencia_id) REFERENCES contactos_emergencia(id)
         )"""
-        #--------------------------------------------------
-        #COMMENT: EJECUCION DE LAS TABLAS SIN LLAVE FORANEA
+        # --------------------------------------------------
+        # COMMENT: EJECUCION DE LAS TABLAS SIN LLAVE FORANEA
         cursor.execute(tabla_proveedor)
         cursor.execute(tabla_puesto)
         cursor.execute(tabla_usuario)
         cursor.execute(tabla_contacto_emergencia)
-        #---------------------------------------------------
-        #COMMENT: EJECUCION DE LAS TABLAS CON LLAVES FORANEAS
+        # ---------------------------------------------------
+        # COMMENT: EJECUCION DE LAS TABLAS CON LLAVES FORANEAS
         cursor.execute(tabla_productos)
         cursor.execute(tabla_compras)
         cursor.execute(tabla_detalle_compra)
         cursor.execute(tabla_empleados)
-
+        usuario_temporal = "INSERT INTO usuarios (nombre_usuario, contraseña) VALUES ('usuario1', 'contraseña');"
+        cursor.execute(usuario_temporal)
         self.conexion.commit()
         self.cerrar_conexion
 
-
-ConexionBD().crear_tablas

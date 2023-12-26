@@ -25,6 +25,7 @@ class Inicio(QMainWindow):
         self.ui.img_login.setPixmap(QPixmap(":/Source/acceso.svg"))
         self.ui.btn_cerrar.clicked.connect(self.cerrar)
         self.ui.btn_ingresar.clicked.connect(self.ingresar)
+        ConexionBD().conexion
 
     def cerrar(self):
         self.close()
