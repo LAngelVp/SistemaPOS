@@ -19,10 +19,9 @@ class Inicio(QMainWindow):
         self.ui.panel_izquierda.setStyleSheet(
             "background:#edecec; border-top-right-radius:0px; border-bottom-right-radius:0px;"
         )
-        self.ui.lbl_recuperar_credenciales.setStyleSheet("text-decoration: underline")
+        self.ui.btn_cerrar.setIconSize(QSize(24,24))
+        self.ui.lbr_recuperar_credenciales.setStyleSheet("text-decoration: underline")
         self.ui.btn_cerrar.setIcon(QIcon(":/Source/img_cerrar.svg"))
-        self.ui.img_fondo.setPixmap(QPixmap(":/Source/Dev_Rous_SF.png"))
-        self.ui.img_login.setPixmap(QPixmap(":/Source/acceso.svg"))
         self.ui.btn_cerrar.clicked.connect(self.cerrar)
         self.ui.btn_ingresar.clicked.connect(self.ingresar)
         ConexionBD().conexion

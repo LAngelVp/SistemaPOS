@@ -26,37 +26,51 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#panel_principal{
+   <string notr="true">#panel_derecha{
+	background-color: rgb(255, 255, 255);
+}
+#frame{
+	background-color: transparent;
+}
+[objectName ^=&quot;lbl&quot;]{
+	color: rgb(0, 0, 0);
+	font-family : Arial;
+	font-size:16px;
+}
+[objectName ^=&quot;txt&quot;] {
+	color: rgb(255, 255, 255);
+	font-family : Arial;
+	font-size:14px;
+	border:0px;
+	background-color: rgb(184, 184, 184);
+}
+#panel_principal{
 background-color: rgb(255, 255, 255);
 }
 #panel_izquierda{
-background-color: rgb(255, 255, 255);
-}
-#txt_usuario{
-	border-radius: 2px;
-}
-#txt_contrasena{
-	border-radius: 2px;
+	background-color: rgb(180, 191, 204);
 }
 #btn_ingresar{
 	border-radius: 5px;
-	background-color: rgb(66, 93, 200);
+	background-color: rgb(0, 102, 140);
+	min-height: 30px;
 	color: rgb(255, 255, 255);
+	font-size: 14px;
+	font-family: Arial;
+	font-weight: bold;
 }
 #btn_ingresar::hover{
 	background-color: rgb(82, 116, 250);
 }
-#lbl_datos_incorrectos{
-	color: rgb(255, 0, 4);
-}
-#txt_usuario{
-	background-color: rgb(236, 236, 236);
-}
-#txt_contrasena{
-	background-color: rgb(236, 236, 236);
+#lbr_recuperar_credenciales{
+	font-size: 12px;
+	color: rgb(0, 0, 0);
+	font-family : Arial;
+	text-decoration:underline;
 }
 #btn_cerrar{
 	background-color:  transparent;
+	border:None;
 }</string>
   </property>
   <widget class="QWidget" name="panel_principal">
@@ -139,7 +153,7 @@ background-color: rgb(255, 255, 255);
              <enum>Qt::PlainText</enum>
             </property>
             <property name="pixmap">
-             <pixmap>../../../../../Downloads/logo.png</pixmap>
+             <pixmap>../Source/Dev_Rous_SF.png</pixmap>
             </property>
             <property name="scaledContents">
              <bool>true</bool>
@@ -207,7 +221,7 @@ background-color: rgb(255, 255, 255);
               <number>5</number>
              </property>
              <property name="rightMargin">
-              <number>10</number>
+              <number>5</number>
              </property>
              <property name="bottomMargin">
               <number>0</number>
@@ -304,7 +318,7 @@ background-color: rgb(255, 255, 255);
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap>../../../../../Downloads/login_img.png</pixmap>
+                <pixmap>../../../PruebasCodigo-master/icons/user-shield.svg</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -340,7 +354,7 @@ background-color: rgb(255, 255, 255);
                <property name="font">
                 <font>
                  <family>Arial</family>
-                 <pointsize>10</pointsize>
+                 <pointsize>-1</pointsize>
                  <weight>75</weight>
                  <bold>true</bold>
                 </font>
@@ -370,7 +384,7 @@ background-color: rgb(255, 255, 255);
                <property name="font">
                 <font>
                  <family>Arial</family>
-                 <pointsize>10</pointsize>
+                 <pointsize>-1</pointsize>
                 </font>
                </property>
                <property name="layoutDirection">
@@ -389,7 +403,7 @@ background-color: rgb(255, 255, 255);
                <property name="font">
                 <font>
                  <family>Arial</family>
-                 <pointsize>10</pointsize>
+                 <pointsize>-1</pointsize>
                  <weight>75</weight>
                  <bold>true</bold>
                 </font>
@@ -419,7 +433,7 @@ background-color: rgb(255, 255, 255);
                <property name="font">
                 <font>
                  <family>Arial</family>
-                 <pointsize>10</pointsize>
+                 <pointsize>-1</pointsize>
                 </font>
                </property>
                <property name="layoutDirection">
@@ -438,6 +452,7 @@ background-color: rgb(255, 255, 255);
                <property name="font">
                 <font>
                  <family>Arial</family>
+                 <pointsize>-1</pointsize>
                  <italic>true</italic>
                 </font>
                </property>
@@ -460,7 +475,7 @@ background-color: rgb(255, 255, 255);
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
-                    <height>25</height>
+                    <height>30</height>
                    </size>
                   </property>
                   <property name="maximumSize">
@@ -472,7 +487,9 @@ background-color: rgb(255, 255, 255);
                   <property name="font">
                    <font>
                     <family>Arial</family>
-                    <pointsize>10</pointsize>
+                    <pointsize>-1</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="cursor">
@@ -490,11 +507,13 @@ background-color: rgb(255, 255, 255);
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="lbl_recuperar_credenciales">
+              <widget class="QLabel" name="lbr_recuperar_credenciales">
                <property name="font">
                 <font>
                  <family>Arial</family>
+                 <pointsize>-1</pointsize>
                  <italic>true</italic>
+                 <underline>true</underline>
                 </font>
                </property>
                <property name="cursor">

@@ -70,8 +70,6 @@ class ventana_principal_trabajo(QMainWindow):
 
     def cerrar(self):
         self.close()
-        ventana_anterior = Inicio()
-        ventana_anterior.show()
 
     def minimizar(self):
         self.showMinimized()
