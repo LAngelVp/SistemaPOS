@@ -1,5 +1,5 @@
 import sys
-from Clases.SRC.iconos import *
+from iconos import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import QIcon, QPixmap, QMouseEvent
@@ -21,7 +21,7 @@ class Inicio(QMainWindow):
         )
         self.ui.btn_cerrar.setIconSize(QSize(24,24))
         self.ui.lbr_recuperar_credenciales.setStyleSheet("text-decoration: underline")
-        self.ui.btn_cerrar.setIcon(QIcon(":/Source/img_cerrar.svg"))
+        self.ui.btn_cerrar.setIcon(QIcon(":/icons/img_cerrar.svg"))
         self.ui.btn_cerrar.clicked.connect(self.cerrar)
         self.ui.btn_ingresar.clicked.connect(self.ingresar)
         ConexionBD().conexion

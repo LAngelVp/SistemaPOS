@@ -1,29 +1,36 @@
 import sys
-from .SRC.iconos import *
+from SRC.iconos import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import QIcon, QPixmap, QMouseEvent
-from .UI.ventana_principal_trabajo import *
+from UI.ventana_principal_trabajo import *
+
 
 class ventana_principal_trabajo(QMainWindow):
     def __init__(self):
         super(ventana_principal_trabajo, self).__init__()
         self.ui = Ui_ventana_de_trabajo()
         self.ui.setupUi(self)
-        self.ui.btn_cerrar.setIcon(QIcon(":/Source/img_cerrar.svg"))
-        self.ui.btn_minimizar.setIcon(QIcon(":/Source/img_minimizar.svg"))
-        self.ui.btn_maximizar.setIcon(QIcon(":/Source/maximizar.svg"))
-        self.ui.btn_btn_menu.setIcon(QIcon(":/Source/menu.svg"))
-        self.ui.btn_btn_cuenta.setIcon(QIcon(":/Source/cuenta.svg"))
-        self.ui.btn_btn_buscar.setIcon(QIcon(":/Source/buscar.svg"))
+        self.ui.btn_cerrar.setIcon(QIcon(":/icons/img_cerrar.svg"))
+        self.ui.btn_cerrar.setIconSize(QSize(25, 25))
+        self.ui.btn_minimizar.setIcon(QIcon(":/icons/img_minimizar.svg"))
+        self.ui.btn_minimizar.setIconSize(QSize(25, 25))
+        self.ui.btn_maximizar.setIcon(QIcon(":/icons/maximizar.svg"))
+        self.ui.btn_maximizar.setIconSize(QSize(25, 25))
+        self.ui.btn_btn_menu.setIcon(QIcon(":/icons/menu.svg"))
+        self.ui.btn_btn_cuenta.setIcon(QIcon(":/icons/cuenta.svg"))
+        self.ui.btn_btn_buscar.setIcon(QIcon(":/icons/buscar.svg"))
+        self.ui.btn_btn_buscar_proveedor.setIcon(QIcon(":/icons/buscar.svg"))
 
-        self.ui.bts_bts_clientes.setIcon(QIcon(":Source/clientes.svg"))
-        self.ui.bts_bts_compras.setIcon(QIcon(":Source/compras.svg"))
-        self.ui.bts_bts_inventario.setIcon(QIcon(":Source/inventario.svg"))
-        self.ui.bts_bts_proveedor.setIcon(QIcon(":Source/proveedor.svg"))
-        self.ui.bts_bts_venta.setIcon(QIcon(":Source/venta.svg"))
+        self.ui.bts_bts_clientes.setIcon(QIcon(":icons/clientes.svg"))
+        self.ui.bts_bts_compras.setIcon(QIcon(":icons/compras.svg"))
+        self.ui.bts_bts_inventario.setIcon(QIcon(":icons/inventario.svg"))
+        self.ui.bts_bts_proveedor.setIcon(QIcon(":icons/proveedor.svg"))
+        self.ui.bts_bts_venta.setIcon(QIcon(":icons/venta.svg"))
+        self.ui.bts_bts_empleados.setIcon(QIcon(":icons/users.svg"))
+        self.ui.bts_bts_empleados.setText("Empleados")
 
-        self.ui.img_logo.setPixmap(QPixmap(":Source/Dev_Rous_SF.png"))
+        self.ui.img_logo.setPixmap(QPixmap(":icons/Dev_Rous_SF.png"))
         self.setWindowFlags(self.windowFlags() | Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground, True)
         self.ui.btn_cerrar.clicked.connect(self.cerrar)
@@ -38,8 +45,12 @@ class ventana_principal_trabajo(QMainWindow):
         self.ui.bts_bts_clientes.clicked.connect(self.panel_clientes)
         self.ui.bts_bts_proveedor.clicked.connect(self.panel_proveedores)
         self.ui.bts_bts_compras.clicked.connect(self.panel_compras)
+        self.ui.bts_bts_empleados.clicked.connect(self.panel_empleados)
+
 
         self.ui.panel_opciones_desplegable.setStyleSheet("max-width:90px;")
+
+        
         self.ui.panel_opciones_desplegable.hide()
         self.ui.panel_paginas.setCurrentIndex(1)
 
@@ -67,6 +78,9 @@ class ventana_principal_trabajo(QMainWindow):
 
     def panel_compras(self):
         self.ui.panel_paginas.setCurrentIndex(2)
+
+    def panel_empleados(self):
+        self.ui.panel_paginas.setCurrentIndex(7)
 
     def cerrar(self):
         self.close()
