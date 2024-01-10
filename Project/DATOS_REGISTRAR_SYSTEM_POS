@@ -1,0 +1,24 @@
+DATOS A CAPTURAR:
+-------
+EMPLEADO:
+    n_empleado
+    nombre_completo
+    f_nacimiento
+    n_identificacion
+    direccion
+    correo_electronico
+    n_telefono
+    curriculum
+    n_seguro_social
+    localidad
+    estado
+-------|tabla_usuarios|
+    nombre_usuario
+    contraseña
+-----|tabla_puestos|
+    puesto
+    sueldo
+-----|tabla_parientes|
+    nombre_completo_pariente
+    parentezco
+    n_telefono
